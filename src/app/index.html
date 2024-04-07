@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carbonite</title>
+        <script src="https://carbonjs.proplayer919.dev/src/carbon.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="root">
+            <div class="sidebar" id="sidebar">
+                <button class="chats-btn" id="chats-btn"><i class="icon icon-message"/></button>
+            </div>
+
+            <div class="sidebar" id="second-sidebar" style="display: none;"></div>
+
+            <div id="app">
+                <div class="messages" style="display: none;">
+                    <div class="message-box" id="message-box"></div>
+                    <div class="bottom-message-bar">
+                        <textarea id="message-input"></textarea>
+                        <button id="send-btn">
+                            <i class="icon icon-send"/>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="empty" id="empty">
+                    <div class="center-island">
+                        <h1 class="island-title">Welcome to Carbon</h1>
+                        <span class="island-caption">Please select a chat to start messaging.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="../cookie.js"></script>
+    </body>
+
+</html>
