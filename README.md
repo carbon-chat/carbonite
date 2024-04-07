@@ -1,4 +1,4 @@
-# Carbon.te
+# Carbonite
 
 ![Number of GitHub contributors](https://img.shields.io/github/contributors/carbon-chat/carbonite)
 [![Number of GitHub issues that are open](https://img.shields.io/github/issues/carbon-chat/carbonite)](https://github.com/carbon-chat/carbonite/issues)
