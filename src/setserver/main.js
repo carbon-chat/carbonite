@@ -1,3 +1,16 @@
+function addCookie(name, value, expires) {
+    document.cookie = `${name}=${value}; expires=${expires}; SameSite=None; Secure`;
+}
+
+function getCookie(name) {
+    const cookie = document.cookie
+        .split('; ')
+        .find(row => row.startsWith(`${name}=`));
+    if (cookie) {
+        return cookie.split('=')[1];
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     server = getCookie("server");
 
@@ -14,14 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     defaultServer.addEventListener('click', () => {
         server = "carbon.proplayer919.dev";
-        setCookie("server", server, 1000 * 60 * 60 * 24 * 7);
+        addCookie("server", server, 1000 * 60 * 60 * 24 * 7);
         root.style.display = 'none';
         window.location.href = '/login';
     });
 
     customServerBtn.addEventListener('click', () => {
         server = serverInput.value;
-        setCookie("server", server, 1000 * 60 * 60 * 24 * 7);
+        addCookie("server", server, 1000 * 60 * 60 * 24 * 7);
         root.style.display = 'none';
         window.location.href = '/login';
     });
