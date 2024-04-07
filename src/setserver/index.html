@@ -13,7 +13,8 @@
         <div id="root">
             <div class="center-island">
                 <h1 class="island-title">Choose a Carbon Server to connect to</h1>
-                <span class="island-caption">Please enter the URL of the server you want to connect to. <span class="small-text" id="use-default">Or use the default server</span></span>
+                <span class="island-caption">Please enter the URL of the server you want to connect to. <span
+                        class="small-text" id="use-default">Or use the default server</span></span>
                 <textarea id="custom-server-input"></textarea>
                 <div class="warning">⚠️ Are you sure you want to connect to a third-party server, this may have <a
                         href="https://github.com/crbon-chat/carbon-docs/blob/main/CUSTOM_SERVERS.md">unintended
@@ -23,7 +24,20 @@
         </div>
 
         <script src="main.js"></script>
-        <script src="../cookie.js"></script>
+        <script>
+            function addCookie(name, value, expires) {
+                document.cookie = `${name}=${value}; expires=${expires}; SameSite=None; Secure`;
+            }
+
+            function getCookie(name) {
+                const cookie = document.cookie
+                    .split('; ')
+                    .find(row => row.startsWith(`${name}=`));
+                if (cookie) {
+                    return cookie.split('=')[1];
+                }
+            }
+        </script>
     </body>
 
 </html>
