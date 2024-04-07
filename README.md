@@ -1,7 +1,7 @@
-# Carbon
+# Carbon.te
 
-![Number of GitHub contributors](https://img.shields.io/github/contributors/carbon-chat/carboniteite)
-[![Number of GitHub issues that are open](https://img.shields.io/github/issues/carbon-chat/carboniteite)](https://github.com/carbon-chat/carboniteite/issues)
+![Number of GitHub contributors](https://img.shields.io/github/contributors/carbon-chat/carbonite)
+[![Number of GitHub issues that are open](https://img.shields.io/github/issues/carbon-chat/carbonite)](https://github.com/carbon-chat/carbonite/issues)
 [![Number of GitHub stars](https://img.shields.io/github/stars/carbon-chat/carbonite)](https://github.com/carbon-chat/carbonite/stargazers)
 ![Number of GitHub closed issues](https://img.shields.io/github/issues-closed/carbon-chat/carbonite)
 ![Number of GitHub pull requests that are open](https://img.shields.io/github/issues-pr-raw/carbon-chat/carbonite)
@@ -9,7 +9,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/carbon-chat/carbonite)
 ![GitHub last commit](https://img.shields.io/github/last-commit/carbon-chat/carbonite)
 
-Carbonite is a 📖 open-source, 🪙 free messaging and social media platform as a supported client for 💬 [Carbon](https://github.com/carbon-chat/carbon).
+Carbonite is a 📖 open-source, 🪙 free messaging and social media platform as a client for 💬 [Carbon](https://github.com/carbon-chat/carbon).
 
 ## Our Mission
 
@@ -21,4 +21,4 @@ Carbon Clients (like this one) connect to an instance of an [Carbon Server](http
 
 ## Getting Started
 
-Open an Carbon Client from [our clients list](https://github.com/carbon-chat/carbon-meta).
+Signup or Login to your Carbon Server at [the Carbonite website](https://carbonite.proplayer919.dev)
