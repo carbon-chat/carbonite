@@ -14,10 +14,6 @@ function getCookie(name) {
 document.addEventListener('DOMContentLoaded', () => {
     server = getCookie("server");
 
-    if (!server) {
-        window.location.href = '/setserver';
-    }
-
     const api = new API(server);
 
     const root = document.getElementById('root');

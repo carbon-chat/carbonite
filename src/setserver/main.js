@@ -13,13 +13,7 @@ function getCookie(name) {
 
 document.addEventListener('DOMContentLoaded', () => {
     server = getCookie("server");
-
-    if (server) {
-        window.location.href = '/login';
-    } else {
-        server = "";
-    }
-
+    
     const root = document.getElementById('root');
     const serverInput = document.getElementById('custom-server-input');
     const customServerBtn = document.getElementById('custom-server-btn');

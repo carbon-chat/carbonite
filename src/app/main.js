@@ -19,18 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentChatId = "";
 
-    if (!server) {
-        window.location.href = '/setserver';
-    }
-
-    if (!authCode) {
-        window.location.href = '/login';
-    }
-
     api = new API(server);
 
-    const root = document.getElementById('root');
-    const sidebar = document.getElementById('sidebar');
     const secondSidebar = document.getElementById('second-sidebar');
     const chatsBtn = document.getElementById('chats-btn');
     const app = document.getElementById('app');
@@ -38,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const messageBox = document.getElementById('message-box');
     const empty = document.getElementById('empty');
     const sendBtn = document.getElementById('send-btn');
+    const usersBar = document.getElementById('users-bar');
 
     chatsBtn.addEventListener('click', () => {
         empty.style.display = 'none';
@@ -57,6 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
         chatBtn.addEventListener('click', () => {
             const chatId = chatBtn.getAttribute('chatid');
             currentChatId = chatId;
+
+            chatUsers = api.getChatUsers(authCode, chatId);
+            userTemplate = `<div class="user"><img class="user-icon" src=$usericon></div>`;
+
+            chatUsers.forEach(user => {
+                usersBar.innerHTML += userTemplate.replace('$usericon', user.icon);
+            });
+
             messages = api.getMessages(authCode, chatId);
             messageTemplate = `<div class="message"><b>$sender</b>: $message</div></div>`
 

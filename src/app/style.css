@@ -170,3 +170,14 @@ button:hover {
     overflow-y: auto;
     transition: margin-left 0.3s ease-in-out;
 }
+
+.user-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    size: contain;
+    border-radius: 100%;
+    border: none;
+}
